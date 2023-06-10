@@ -1,0 +1,66 @@
+.row{
+    margin-top: 20px;
+    margin-left:20px;
+    color: white;
+
+}
+.posters{
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.posters::-webkit-scrollbar{
+    display: none;
+}
+.poster{
+    cursor: pointer;
+    max-height: 250px;
+    margin-right: 10px;
+    transition: all .4s;
+    position: relative;
+
+}
+/* .poster:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 4px 15px 5px rgba(0, 0, 0, 0.5)
+} */
+.poster:hover .middle{
+  
+    opacity: 0%;
+
+}
+
+.smallposter{
+    cursor: pointer;
+    max-height: 150px;
+    margin-right: 10px;
+    transition: all .4s;
+}
+/* .smallposter:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 4px 15px 5px rgba(0, 0, 0, 0.5)
+} */
+.wrap{
+    position: relative;
+}
+.middle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.42);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+.wrap:hover .middle{
+    visibility: visible;
+    opacity: 1;
+  
+}
